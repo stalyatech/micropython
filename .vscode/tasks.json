@@ -1,0 +1,41 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build SmartAnt",
+      "type": "shell",
+      "command": "make -j4 BOARD=SMART_ANTENNA USE_MBOOT=0 DEBUG=1",
+      "options": {
+          "cwd": "${workspaceRoot}/ports/stm32"
+      },
+      "group": {
+          "kind": "build",
+          "isDefault": true
+      },
+      "presentation": {
+          "reveal": "always",
+          "panel": "dedicated"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Clean SmartAnt",
+      "type": "shell",
+      "command": "make BOARD=SMART_ANTENNA clean",
+      "options": {
+          "cwd": "${workspaceRoot}/ports/stm32"
+      },
+      "group": {
+          "kind": "build",
+          "isDefault": true
+      },
+      "presentation": {
+          "reveal": "always",
+          "panel": "dedicated"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
