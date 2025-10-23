@@ -1,0 +1,5 @@
+include("$(PORT_DIR)/boards/manifest.py")
+require("bundle-networking")
+package('sdk', base_path='$(MPY_DIR)/extmod/sdk/src', opt=2)
+module('sbc.py')
+module("_boot.py")

@@ -1,0 +1,7 @@
+{
+	"files.associations": {
+		"x509_crt.h": "c",
+		"aes.h": "c",
+		"platform_util.h": "c"
+	}
+}
